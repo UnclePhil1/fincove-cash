@@ -11,7 +11,7 @@ const Introduction = () => {
     <div className="flex justify-between items-center gap-10 bg-white lg:h-[100vh]">
       <div className="px-10 md:w-[600px]">
         <h1 className="text-[2.5em] font-semibold text-[#A7368D]">
-          Do finance the Smart way with <span className="text-[#F6C32E]">Fincove</span>
+        Experience Fintech Evolution With <span className="text-[#F6C32E]">Fincove</span>
         </h1>
         <p className="text-primary">
           Transform your Finance with AI Insights and <br /> hybrid Peer-to-Peer

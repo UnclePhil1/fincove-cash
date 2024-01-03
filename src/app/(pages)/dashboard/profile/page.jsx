@@ -3,8 +3,7 @@ import React from "react";
 const Profile =() => {
 
     return (
-        <div className="w-full flex-grow h-full lg:px-[15%] px-4 py-5 bg-background">
-            
+        <div className="md:px-[10%] md:py-[4%] p-[20px] h-[200vh]">
             {/* Image aspect */}
             <div className="flex flex-row items-center justify-evenly">
 
@@ -13,7 +12,6 @@ const Profile =() => {
             </div>
 
             {/* Form Aspect */}
-
             <div className="w-full items-center mt-5 mb-5">
 
                 {/* Full name */}

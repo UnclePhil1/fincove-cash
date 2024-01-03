@@ -11,11 +11,6 @@ module.exports = {
         rowdies: ['Rowdies', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
       colors: {
         "primary": "#421638",
         "light": "#FFB3ED",

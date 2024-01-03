@@ -46,7 +46,7 @@ const Settings =() => {
 
     return (
         <div className="w-full flex-grow lg:px-[15%] px-4 py-4 bg-background">
-            <div className="py-4 flex-col items-center justify-evenly">
+            <div className="py-4 flex-col items-center justify-evenly bg-white p-4 rounded-md">
             <ul
             className={`${
                 hovered ? "mt-[40px]" : "mt-[40px]"

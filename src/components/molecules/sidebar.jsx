@@ -38,7 +38,7 @@ const Sidebar = () => {
       {
         title: "P2P Loans",
         icon: <Money />,
-        path: "/dashboard/loans",
+        path: "/dashboard/lending",
       },
       {
         title: "Settings",

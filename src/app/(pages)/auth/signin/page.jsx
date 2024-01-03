@@ -5,8 +5,6 @@ import { useRouter } from "next/navigation";
 import Logo from "../../../../../public/Image/logo.png";
 import Link from "next/link";
 import "../../../../../src/style.css";
-import Emails from "../../../../components/atoms/emailsField";
-import Password from "../../../../components/atoms/passwordField";
 
 const SignIn = () => {
   const router = useRouter();
@@ -32,7 +30,7 @@ const SignIn = () => {
     //     sessionStorage.setItem("password", password);
 
     //     // Redirect to dashboard
-        router.push("/dashboard");
+    router.push("/dashboard");
     //   } else {
     //     // If authentication fails, display error message
     //     setError("Invalid email or password. Please try again.");
@@ -43,69 +41,67 @@ const SignIn = () => {
     // }
   };
   return (
-    <div>
-      <div className="flex flex-col md:flex-row w-[100%] justify-center items-center p-4 lg:py-10 lg:px-20 bg-white gap-10">
-        <div className="bg-background rounded-[20px] h-[100%] p-8 md:w-[40%] flex flex-col justify-start items-start">
-          <Image
-            src={Logo}
-            alt="logo.png"
-            width={700}
-            height={300}
-            className="w-[120px] h-[50px]"
-          />
-          <div className="pt-10 flex flex-col justify-center items-center w-[100%]">
-            <h2 className="text-primarydark text-[18px] font-semibold text-center">
-              Login to Account
-            </h2>
-            <p className="text-[14px] font-semibold text-center">
-              Fill in your account credentials to sign to Account
-            </p>
-            <div className="pt-4 w-[100%] flex flex-col">
-              <label htmlFor="email" className="text-primary text-[14px]">
-                Email Address <i className="text-red">*</i>
-              </label>
-              {/* <Emails setEmail={setEmail} /> */}
-              <input
-                type="email"
-                id="email"
-                className="border rounded py-2 px-3 focus:outline-primary"
-                required
-              />
-            </div>
-            <div className="py-2 w-[100%] flex flex-col justify-start">
-              <label htmlFor="password" className="text-primary text-[14px]">
-                Password <i className="text-red">*</i>
-              </label>
-              {/* <Password setPassword={setPassword} /> */}
-              <input
-                type="password"
-                id="password"
-                className="border rounded py-2 px-3 focus:outline-primary"
-                required
-              />
-            </div>
-            <div className="text-red">{error}</div>
-            <button
-              className="py-2 px-4 w-[100%] rounded-md bg-primary text-white mt-4"
-              onClick={handleSignIn}
-            >
-              SignIn
-            </button>
-
-            <div className="flex items-center gap-[1rem] my-2">
-              <div className="md:w-[100%] w-[100%] bg-darkgray h-[1px]"></div>
-              <div>Or</div>
-              <div className="md:w-[100%] w-[100%] bg-darkgray h-[1px]"></div>
-            </div>
-            <Link
-              href={"/auth/signup"}
-              className="text-center py-2 px-4 w-[100%] mt-4 rounded-md border border-primary text-primary"
-            >
-              New here? SignUp Now!
-            </Link>
+    <div className="w-screen h-screen flex flex-col md:flex-row items-center justify-center">
+      <div className="bg-background rounded-[20px] h-[100%] p-8 flex flex-col justify-start items-start md:w-[50%] m-4 md:m-0">
+        <Image
+          src={Logo}
+          alt="logo.png"
+          width={700}
+          height={300}
+          className="w-[120px] h-[50px]"
+        />
+        <div className="pt-10 md:px-[10%] flex flex-col justify-center items-center w-[100%]">
+          <h2 className="text-primarydark text-[18px] font-semibold text-center">
+            Login to Account
+          </h2>
+          <p className="text-[14px] font-semibold text-center">
+            Fill in your account credentials to sign to Account
+          </p>
+          <div className="pt-4 w-[100%] flex flex-col">
+            <label htmlFor="email" className="text-primary text-[14px]">
+              Email Address <i className="text-red">*</i>
+            </label>
+            {/* <Emails setEmail={setEmail} /> */}
+            <input
+              type="email"
+              id="email"
+              className="border rounded py-2 px-3 focus:outline-primary"
+              required
+            />
           </div>
+          <div className="py-2 w-[100%] flex flex-col justify-start">
+            <label htmlFor="password" className="text-primary text-[14px]">
+              Password <i className="text-red">*</i>
+            </label>
+            <input
+              type="password"
+              id="password"
+              className="border rounded py-2 px-3 focus:outline-primary"
+              required
+            />
+          </div>
+          <div className="text-red">{error}</div>
+          <button
+            className="py-2 px-4 w-[100%] rounded-md bg-primary text-white mt-4"
+            onClick={handleSignIn}
+          >
+            SignIn
+          </button>
+
+          <div className="flex items-center gap-[1rem] my-2">
+            <div className="md:w-[100%] w-[100%] bg-darkgray h-[1px]"></div>
+            <div>Or</div>
+            <div className="md:w-[100%] w-[100%] bg-darkgray h-[1px]"></div>
+          </div>
+          <Link
+            href={"/auth/signup"}
+            className="text-center py-2 px-4 w-[100%] mt-4 rounded-md border border-primary text-primary"
+          >
+            New here? SignUp Now!
+          </Link>
         </div>
       </div>
+      <div className="flex-1 h-full object-cover sideaAuthImageSignIn hidden md:block"></div>
     </div>
   );
 };

@@ -8,48 +8,143 @@
   gap: 20px;
 }
 
-/* .no-scrollbar {
-  ::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-    width: 0;
-    height: 0;
-  }
-
-  scrollbar-width: none;
-} */
-
-.signin{
-  background: linear-gradient(#F6C32E, #421638);
+.signin {
+  background: linear-gradient(#f6c32e, #421638);
 }
-.signup:hover{
-  background: linear-gradient(#F6C32E, #421638);
+.signup:hover {
+  background: linear-gradient(#f6c32e, #421638);
 }
 
-.signup{
-  background: linear-gradient( #421638, #F6C32E);
+.signup {
+  background: linear-gradient(#421638, #f6c32e);
 }
-.signin:hover{
-  background: linear-gradient( #421638, #F6C32E);
+.signin:hover {
+  background: linear-gradient(#421638, #f6c32e);
 }
 
-.links{
+.sideaAuthImageSignUp{
+  background: linear-gradient(#000000c5, rgba(0, 0, 0, 0.815)), url('../public/Image/signin.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.sideaAuthImageSignIn{
+  background-image:linear-gradient(#000000c2, rgba(0, 0, 0, 0.808)), url('../public/Image/signup.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.links {
   color: #421638;
   text-align: start;
   align-self: flex-start;
   margin: 0;
 }
-.links:hover{
-  color: #F6C32E;
+.links:hover {
+  color: #f6c32e;
 }
 
 .background {
   background-color: #421638;
   border-right: 2px solid #ececec;
+}
+
+.servicesBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.servicesBox .panel {
+  height: 60vh;
+  border-radius: 50px;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  transition: flex 0.5s linear;
+  background: linear-gradient(#000000d8, rgba(0, 0, 0, 0.863));
+}
+
+.servicesBox .panel h1 {
+  color: white;
+  opacity: 0;
+  font-size: 1.4em;
+  padding: 4px 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.servicesBox .panel p {
+  font-size: 16px;
+  color: #dad8d8;
+  width: 50%;
+  opacity: 0;
+}
+.servicesBox .panel .Link {
+  opacity: 0;
+}
+
+.servicesBox .panel.active {
+  flex: 5;
+}
+
+.servicesBox .panel.active h1,
+.servicesBox .panel.active p,
+.servicesBox .panel.active .Link
+ {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+/* ServiceCard.module.css */
+
+.overlayContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0; 
+  margin: 0;
+}
+
+.overlay {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  border-radius: 50px; /* Same as the rounded value in the Image component */
+}
+
+@media only screen and (max-width: 480px) {
+  .servicesBox {
+    padding: 0;
+  }
+
+  .servicesBox .panel:nth-of-type(2) h1,
+  .servicesBox .panel:nth-of-type(3) h1,
+  .servicesBox .panel:nth-of-type(4) h1 {
+    /* display: none; */
+    left: 5px;
+  }
+
+  .servicesBox .panel h1 {
+    left: 5px;
+  }
+  .servicesBox .panel p {
+    display: none;
+  }
+  .servicesBox .panel .Link {
+    
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -76,10 +171,8 @@
   }
 }
 
-
-
 @media (max-width: 768px) {
-  .responsive{
+  .responsive {
     flex-direction: column;
     position: fixed;
     background: #fff;
@@ -90,11 +183,11 @@
     height: 100vh;
   }
 
-  .links{
+  .links {
     margin: 0;
   }
 
-  ul{
+  ul {
     gap: 30px;
   }
 
