@@ -95,13 +95,22 @@ const SignIn = () => {
           </div>
           <Link
             href={"/auth/signup"}
-            className="text-center py-2 px-4 w-[100%] mt-4 rounded-md border border-primary text-primary"
+            className="text-center py-2 px-4 w-[100%] mt-4 rounded-md text-primary"
           >
-            New here? SignUp Now!
+            New here? <span className="text-[#F6C32E]">SignUp Now!</span>
           </Link>
         </div>
       </div>
-      <div className="flex-1 h-full object-cover sideaAuthImageSignIn hidden md:block"></div>
+      <div className="flex-1 h-full object-cover sideaAuthImageSignUp hidden md:block pt-[20%] px-8">
+        <h1 className="text-white text-[2.5em]">Welcome Back!</h1>
+        <h2 className="text-slate-50 text-[20px]">
+          Please sign into your account
+        </h2>
+        <p className="text-slate-300 text-[15px] py-2">
+          Freedom at it peak your security in your hand Flex the Web5.0 new
+          identity protection
+        </p>
+      </div>
     </div>
   );
 };

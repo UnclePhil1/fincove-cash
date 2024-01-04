@@ -26,6 +26,16 @@ const ServiceCard = () => {
       header: "Financial Insights",
       text: "Gain insights into financial markets and make informed investment decisions.",
     },
+    {
+      url: "/Image/decent.jpg",
+      header: "Decentralised Apps",
+      text: "Dive into the next era of decentralized applications with Web 5.",
+    },
+    {
+      url: "/Image/secure.jpg",
+      header: "Data Protection",
+      text: "our data security is our top priority as you borrow or access credit",
+    },
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);

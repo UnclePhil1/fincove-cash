@@ -1,10 +1,10 @@
 'use client'
 import React from "react";
 import { useRouter } from "next/navigation";
-import Lend from "../../../../public/Image/lend.png";
-import Coin from "../../../../public/Image/coin.png";
-import Report from "../../../../public/Image/report.png";
-import Invest from "../../../../public/Image/invest.png";
+import Lend from "@/../../public/Image/lend.png";
+import Coin from "@/../../public/Image/coin.png";
+import Report from "@/../../public/Image/report.png";
+import Invest from "@/../../public/Image/invest.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,9 +12,9 @@ const Diagram = () => {
   const array = [
     {
       src: Coin,
-      text: "Asset coin",
+      text: "Asset OverView",
       paragraph: "Get to know the market",
-      link: '/notFound'
+      link: '/dashboard/Overview'
     },
     {
       src: Lend,

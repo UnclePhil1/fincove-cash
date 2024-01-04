@@ -1,34 +1,28 @@
 import Image from "next/image";
 import React from "react";
-import Earth from "../../../../public/Image/earth.png";
+import Earth from "../../../../public/Image/intro.png";
 import Link from "next/link";
 import "../../../../src/style.css";
-
-// import Earth from '../../../../public/Image/earth.png'
 
 const Introduction = () => {
   return (
     <div className="flex justify-between items-center gap-10 bg-white lg:h-[100vh]">
       <div className="px-10 md:w-[600px]">
         <h1 className="text-[2.5em] font-semibold text-[#A7368D]">
-        Experience Fintech Evolution With <span className="text-[#F6C32E]">Fincove</span>
+          Experience Fintech Evolution With
+          <span className="text-[#F6C32E] pl-2"> Fincove</span>
         </h1>
         <p className="text-primary">
-          Transform your Finance with AI Insights and <br /> hybrid Peer-to-Peer
-          Lending
+          We use super-safe Web 5 technology to keep your Finance and
+          information secure, making it easy and safe for you to manage your
+          cash.
         </p>
         <div className="flex flex-col md:flex-row gap-10 mt-5">
           <Link
-            href={"/auth/signin"}
-            className="md:flex text-white py-2 px-4 rounded signin"
-          >
-            Sign In
-          </Link>
-          <Link
             href={"/auth/signup"}
-            className="md:flex text-primary py-2 px-4 rounded border border-primary hover:border-[#BF894F]"
+            className="md:flex text-white py-2 px-4 rounded bg-primary"
           >
-            Sign Up
+            Get Started
           </Link>
         </div>
       </div>
@@ -37,7 +31,7 @@ const Introduction = () => {
         alt="earth.png"
         width={700}
         height={300}
-        className="lg:w-[500px] lg:h-[700px] absolute top-[20px] right-0 hidden lg:block"
+        className="hidden lg:block w-[50%]"
       />
     </div>
   );

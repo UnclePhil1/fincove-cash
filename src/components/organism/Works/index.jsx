@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Works = () => {
   return (
-    <div className="w-[100%] bg-[#E3C0DB] py-10 my-20 text-center flex-col flex lg:flex-row justify-center items-center h-auto">
+    <div className="w-[100%] bg-[#E3C0DB] py-10 my-20 md:m-0 text-center flex-col flex lg:flex-row justify-center items-center h-auto">
       <h1 className="text-[#A7368D] font-bold text-[2em] lg:text-[3.5em] px-4">
        Stay In The <br />
        <span className="text-[#F6C32E]">Cove</span>

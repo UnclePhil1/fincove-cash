@@ -6,8 +6,6 @@ import { useRouter } from "next/navigation";
 import Logo from "../../../../../public/Image/logo.png";
 import Link from "next/link";
 import "../../../../../src/style.css";
-import Password from "../../../../components/atoms/passwordField";
-import Emails from "../../../../components/atoms/emailsField";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -144,8 +142,10 @@ const SignUp = () => {
           </button>
         </div>
       </div>
-      <div className="flex-1 h-full object-cover sideaAuthImageSignUp hidden md:block">
-        
+      <div className="flex-1 h-full object-cover sideaAuthImageSignIn md:block pt-[20%] px-8">
+        <h1 className="text-white text-[2.5em]">Welcome User</h1>
+        <h2 className="text-slate-50 text-[20px]">Please sign into your account</h2>
+        <p className="text-slate-300 text-[15px] py-2">Enjoy unlimited Evolution with web5.0 Identity security </p>
       </div>
     </div>
   );

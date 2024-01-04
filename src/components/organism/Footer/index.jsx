@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Logo from "../../../../public/Image/logo.png";
+import Logo from "../../../../public/Image/footer.png";
 import "../../../../src/style.css";
 import Link from "next/link";
 
@@ -14,7 +14,7 @@ const Footer = () => {
             alt="Logo.png"
             width={700}
             height={300}
-            className="w-[130px] h-[70px]"
+            className="w-[130px] h-[50px]"
           />
         </div>
         <div>
@@ -24,6 +24,10 @@ const Footer = () => {
           <h2 className="text-[20px] font-semibold text-white">
             Subscribe to our newsletter
           </h2>
+          <p className="text-white text-[15px] py-2">
+            Subscribe to our newsletter to get update and news on the new
+            development about Fincove. Don not miss out on new update and giveaway
+          </p>
           <input
             type="email"
             id="email"
@@ -34,20 +38,17 @@ const Footer = () => {
           <Link
             href={"/auth/signup"}
             className="text-white py-2 px-4 bg-[#A7368D] w-[200px] text-center flex my-2"
-            style={{ borderTopLeftRadius: "10px", borderTopRightRadius: "10px",borderBottomLeftRadius: "10px",borderBottomRightRadius: "10px", textAlign: "center" }}
+            style={{
+              borderTopLeftRadius: "10px",
+              borderTopRightRadius: "10px",
+              borderBottomLeftRadius: "10px",
+              borderBottomRightRadius: "10px",
+              textAlign: "center",
+            }}
           >
             Subscibe
           </Link>
         </div>
-      </div>
-      <div className="py-5 text-center">
-        <hr className="bg-primary" />
-        <span className="py-2 text-[#fff]">
-          Copyright <strong>@FINCOVE</strong>|Sponsored by{" "}
-          <Link href={"fcmb.com"} className="text-[#fff] font-semibold">
-            FCMB
-          </Link>
-        </span>
       </div>
     </div>
   );
