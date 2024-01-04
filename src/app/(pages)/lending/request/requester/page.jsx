@@ -5,9 +5,10 @@ const Details = ({ id }) => {
 
   return (
     <div>
-      <h1>Details for Item {item.id}</h1>
-      <p>Name: {item.name}</p>
-      <p>Email: {item.email}</p>
+      <h1>Details for Item {id}</h1>
+      <p>Requester: {item.Requester}</p>
+      <p>Amount: {item.Amount}</p>
+      <p>Interest Duration: {item.InterestDuration}</p>
     </div>
   );
 };
