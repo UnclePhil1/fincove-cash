@@ -41,8 +41,8 @@ const SignIn = () => {
     // }
   };
   return (
-    <div className="w-screen h-screen flex flex-col md:flex-row items-center justify-center">
-      <div className="bg-background rounded-[20px] h-[100%] p-8 flex flex-col justify-start items-start md:w-[50%] m-4 md:m-0">
+    <div className="w-screen h-screen flex flex-col md:flex-row items-center justify-center py-8 md:p-0">
+      <div className="md:bg-background rounded-[20px] h-[100%] p-8 flex flex-col justify-start items-start md:w-[50%] m-4 md:m-0">
         <Image
           src={Logo}
           alt="logo.png"
@@ -101,7 +101,7 @@ const SignIn = () => {
           </Link>
         </div>
       </div>
-      <div className="flex-1 h-full object-cover sideaAuthImageSignUp hidden md:block pt-[20%] px-8">
+      <div className="flex-1 h-full object-cover sideaAuthImageSignUp md:block pt-[20%] px-8 hidden">
         <h1 className="text-white text-[2.5em]">Welcome Back!</h1>
         <h2 className="text-slate-50 text-[20px]">
           Please sign into your account

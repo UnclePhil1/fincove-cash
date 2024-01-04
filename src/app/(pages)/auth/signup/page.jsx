@@ -50,8 +50,8 @@ const SignUp = () => {
   const isSignUpDisabled = !(email && password && isChecked);
 
   return (
-    <div className="w-screen h-screen flex flex-col md:flex-row items-center justify-center">
-      <div className="bg-background rounded-[20px] h-[100%] p-8 flex flex-col justify-start items-start md:w-[50%] m-4 md:m-0">
+    <div className="w-screen h-screen flex flex-col md:flex-row items-center justify-center py-4 md:p-0">
+      <div className="md:bg-background rounded-[20px] h-[100%] p-8 flex flex-col justify-start items-start md:w-[50%] m-4 md:m-0">
         <Image
           src={Logo}
           alt="logo.png"
@@ -132,7 +132,7 @@ const SignUp = () => {
           </div>
           <button
             title="Fill the form to enable signup"
-            className={`py-2 px-4 w-[100%] rounded-md bg-primary text-white ${
+            className={`py-2 mb-4 px-4 w-[100%] rounded-md bg-primary text-white ${
               isSigningUp ? "opacity-1 cursor-not-allowed" : "opacity-100"
             }`}
             onClick={handleSignUp}
@@ -142,7 +142,7 @@ const SignUp = () => {
           </button>
         </div>
       </div>
-      <div className="flex-1 h-full object-cover sideaAuthImageSignIn md:block pt-[20%] px-8">
+      <div className="flex-1 h-full object-cover sideaAuthImageSignIn hidden md:block pt-[20%] px-8">
         <h1 className="text-white text-[2.5em]">Welcome User</h1>
         <h2 className="text-slate-50 text-[20px]">Please sign into your account</h2>
         <p className="text-slate-300 text-[15px] py-2">Enjoy unlimited Evolution with web5.0 Identity security </p>

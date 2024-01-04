@@ -8,7 +8,7 @@ const AccessSite = () => {
         Access Financial insights in
         <span className="text-[#F6C32E]">3 easy steps</span>
       </h1>
-      <div className="flex justify-center items-center gap-20 pt-8">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-20 pt-8">
         <div className="items-center self-center flex flex-col text-primarydark">
           <Image
             src={"/Image/signup.png"}
