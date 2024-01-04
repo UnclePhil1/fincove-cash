@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Home, AdminPanelSettings, People, ModelTraining, Analytics, Settings, Money } from "@mui/icons-material";
+import { Home, SignalWifiStatusbarConnectedNoInternet4Sharp, TransferWithinAStation, CreditScore, Money } from "@mui/icons-material";
 import Image from "next/image";
 import "../../../src/style.css";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { Toolbar } from "@mui/material";
 
 
-const Sidebar = () => {
+const Sidebarp2p = () => {
   const [hovered, setHovered] = useState(false);
 
   const handleHover = () => {
@@ -21,35 +21,30 @@ const Sidebar = () => {
 
   const SideList = [
     {
-        title: "Dashboard",
+        title: "Home",
         icon: <Home />,
         path: "/dashboard",
       },
       {
-        title: "Account",
-        icon: <AdminPanelSettings />,
-        path: "/dashboard/profile",
-      },
-      {
-        title: "Finance Intelligence",
-        icon: <ModelTraining />,
-        path: "/dashboard/finance",
-      },
-      {
-        title: "P2P Loans",
+        title: "Loan Request",
         icon: <Money />,
-        path: "/lending",
+        path: "/lending/request",
       },
       {
-        title: "Settings",
-        icon: <Settings />,
-        path: "/dashboard/settings",
+        title: "Loan Offer",
+        icon: <CreditScore />,
+        path: "/lending/offer",
       },
       {
-        title: "Supports",
-        icon: <Analytics />,
-        path: "/dashboard/support",
-      }
+        title: "Transfer",
+        icon: <TransferWithinAStation />,
+        path: "/lending/transfer",
+      },
+      {
+        title: "Eligibility status",
+        icon: <SignalWifiStatusbarConnectedNoInternet4Sharp />,
+        path: "/lending/status",
+      },
   ];
   const pathname = usePathname();
 
@@ -86,4 +81,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Sidebarp2p;
