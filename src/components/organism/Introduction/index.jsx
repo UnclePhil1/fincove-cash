@@ -6,8 +6,8 @@ import "../../../../src/style.css";
 
 const Introduction = () => {
   return (
-    <div className="flex justify-between items-center gap-10 bg-white lg:h-[100vh]">
-      <div className="px-10 md:w-[600px]">
+    <div className="flex justify-between items-center gap-10 bg-white lg:h-[100vh] md:px-10 p-4">
+      <div className="md:px-10 md:w-[600px]">
         <h1 className="text-[2.5em] font-semibold text-[#A7368D]">
           Experience Fintech Evolution With
           <span className="text-[#F6C32E] pl-2"> Fincove</span>

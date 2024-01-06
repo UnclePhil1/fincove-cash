@@ -61,10 +61,11 @@ const ServiceCard = () => {
         panel.removeEventListener("click", () => handlePanelClick(index));
       });
     };
-  }, []); // Run the effect once on component mount
+    // Include handlePanelClick in the dependency array for the cleanup effect
+  }, [handlePanelClick]); // Run the effect once on component mount
 
   return (
-    <div className="bg-background py-8 mt-4">
+    <div className="bg-background py-8 mt-4 md:px-10 p-4">
       <h1 className="self-start items-start text-[#A7368D] font-semibold text-[2.5em] px-4">
         Why <span className="text-[#F6C32E]">Fincove</span>
       </h1>

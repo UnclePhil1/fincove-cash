@@ -6,7 +6,6 @@ const Profile =() => {
         <div className="md:px-[10%] md:py-[4%] p-[20px] h-[200vh]">
             {/* Image aspect */}
             <div className="flex flex-row items-center justify-evenly">
-
                 <button className="p-3 rounded-lg links bg-purple-800 text-white text-center justify-center items-center">Upload New</button>
                 <button className="p-3 rounded-lg links bg-gray-700 text-white text-center justify-center items-center">Delete Avatar</button>
             </div>

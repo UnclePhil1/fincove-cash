@@ -3,7 +3,7 @@ import React from "react";
 
 const AccessSite = () => {
   return (
-    <div className="py-8 md:h-[70vh] flex flex-col justify-center items-center">
+    <div className="py-8 md:h-[70vh] flex flex-col justify-center items-center md:px-10 p-4">
       <h1 className="self-start items-start text-[#A7368D] font-semibold text-[2.5em] px-4">
         Access Financial insights in
         <span className="text-[#F6C32E]">3 easy steps</span>

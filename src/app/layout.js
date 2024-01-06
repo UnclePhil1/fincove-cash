@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
         />
       </Head>
-      <body className={inter.className}>
+      <body>
           <Providers>{children}</Providers>
       </body>
     </html>
