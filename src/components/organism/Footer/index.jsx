@@ -36,7 +36,7 @@ const Footer = () => {
             required
           />
           <Link
-            href={"/auth/signup"}
+            href={"/auth/register"}
             className="text-white py-2 px-4 bg-[#A7368D] w-[200px] text-center flex my-2"
             style={{
               borderTopLeftRadius: "10px",

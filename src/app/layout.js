@@ -3,6 +3,9 @@ import "./globals.css";
 import Providers from "../app/providers";
 import "@rainbow-me/rainbowkit/styles.css";
 import Head from "next/head";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -20,7 +23,10 @@ export default function RootLayout({ children }) {
         />
       </Head>
       <body>
-          <Providers>{children}</Providers>
+        <Providers>
+          <ToastContainer />
+          {children}
+        </Providers>
       </body>
     </html>
   );

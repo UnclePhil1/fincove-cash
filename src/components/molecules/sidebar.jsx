@@ -1,15 +1,32 @@
 "use client";
 import React, { useState } from "react";
-import { Home, AdminPanelSettings, People, ModelTraining, Analytics, Settings, Money } from "@mui/icons-material";
+import {
+  Home,
+  AdminPanelSettings,
+  People,
+  ModelTraining,
+  Analytics,
+  Settings,
+  Money,
+} from "@mui/icons-material";
 import Image from "next/image";
 import "../../../src/style.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Toolbar } from "@mui/material";
-
+import { signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const Sidebar = () => {
   const [hovered, setHovered] = useState(false);
+  const router = useRouter();
+  const { data: session } = useSession();
+
+  const handleLogout = async () => {
+    await signOut();
+    // Redirect to the homepage after successful logout
+    router.push("/");
+  };
 
   const handleHover = () => {
     setHovered(true);
@@ -21,35 +38,35 @@ const Sidebar = () => {
 
   const SideList = [
     {
-        title: "Dashboard",
-        icon: <Home />,
-        path: "/dashboard",
-      },
-      {
-        title: "Account",
-        icon: <AdminPanelSettings />,
-        path: "/dashboard/profile",
-      },
-      {
-        title: "Finance Intelligence",
-        icon: <ModelTraining />,
-        path: "/dashboard/finance",
-      },
-      {
-        title: "P2P Loans",
-        icon: <Money />,
-        path: "/lending",
-      },
-      {
-        title: "Settings",
-        icon: <Settings />,
-        path: "/dashboard/settings",
-      },
-      {
-        title: "Supports",
-        icon: <Analytics />,
-        path: "/dashboard/support",
-      }
+      title: "Dashboard",
+      icon: <Home />,
+      path: "/dashboard",
+    },
+    {
+      title: "Account",
+      icon: <AdminPanelSettings />,
+      path: "/dashboard/profile",
+    },
+    {
+      title: "Finance Intelligence",
+      icon: <ModelTraining />,
+      path: "/dashboard/finance",
+    },
+    {
+      title: "P2P Loans",
+      icon: <Money />,
+      path: "/lending",
+    },
+    {
+      title: "Settings",
+      icon: <Settings />,
+      path: "/dashboard/settings",
+    },
+    {
+      title: "Supports",
+      icon: <Analytics />,
+      path: "/dashboard/support",
+    },
   ];
   const pathname = usePathname();
 
@@ -68,8 +85,17 @@ const Sidebar = () => {
           } flex flex-col justify-start align-start items-start gap-[10px]`}
         >
           {SideList.map((item, i) => (
-            <li key={i} className={`${pathname == item.path ? 'bg-[#4d94ff14]  border-l-[5px] border-primary border' : ''} rounded-lg  flex w-[100%] justify-start items-center hover:bg-light`}>
-              <span className="py-2 ml-2 text-[25px] text-white">{item.icon}</span>
+            <li
+              key={i}
+              className={`${
+                pathname == item.path
+                  ? "bg-[#4d94ff14]  border-l-[5px] border-primary border"
+                  : ""
+              } rounded-lg  flex w-[100%] justify-start items-center hover:bg-light`}
+            >
+              <span className="py-2 ml-2 text-[25px] text-white">
+                {item.icon}
+              </span>
               <Link
                 className={`px-2 text-[15px] text-white rounded  w-[80%] self-center ${
                   hovered ? "scale-100 ml-[5px] cursor-pointer" : "scale-0"
@@ -80,6 +106,14 @@ const Sidebar = () => {
               </Link>
             </li>
           ))}
+          <button
+            onClick={handleLogout}
+            className={`rounded-lg  flex w-[100%] justify-start items-center hover:bg-light text-white py-2 px-4  ${
+              hovered ? "scale-100 ml-[5px] cursor-pointer" : "scale-0"
+            } duration-100`}
+          >
+            Logout
+          </button>
         </ul>
       </section>
     </div>

@@ -5,8 +5,16 @@ import Works from '../components/organism/Works/index';
 import Footer from '../components/organism/Footer/index';
 import ServiceCard from '@/../../src/components/molecules/serviceCard'
 import AccessSite from '../components/organism/AccessSite/index'
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+import { authOptions } from "./api/auth/[...nextauth]/route";
+const session = await getServerSession(authOptions);
+
 
 export default function Home() {
+  // const session = getServerSession(authOptions);
+
+  // if (session) redirect("/");
   return (
     <div className="bg-white">
       <Navbar />

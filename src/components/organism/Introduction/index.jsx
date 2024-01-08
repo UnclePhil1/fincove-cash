@@ -19,7 +19,7 @@ const Introduction = () => {
         </p>
         <div className="flex flex-col md:flex-row gap-10 mt-5">
           <Link
-            href={"/auth/signup"}
+            href={"/auth/register"}
             className="md:flex text-white py-2 px-4 rounded bg-primary"
           >
             Get Started

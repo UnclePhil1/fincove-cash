@@ -17,10 +17,11 @@ import { mainnet, polygon, optimism, arbitrum, base, zora } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import { config } from "process";
+import { SessionProvider } from "next-auth/react";
 
 const projectId = "df4b33c621ff53615df4b05f1b15d13a";
 
-const { chains, publicClient, } = configureChains(
+const { chains, publicClient } = configureChains(
   [mainnet, polygon, optimism, arbitrum, base, zora],
   [publicProvider()]
 );
@@ -55,15 +56,16 @@ const wagmiConfig = createConfig({
   publicClient,
 });
 
-
 const Providers = ({ children }) => {
-  return(
-    <WagmiConfig config={wagmiConfig}>
+  return (
+    <SessionProvider>
+      <WagmiConfig config={wagmiConfig}>
         <RainbowKitProvider chains={chains} appInfo={demoAppInfo}>
-            {children}
+          {children}
         </RainbowKitProvider>
-    </WagmiConfig>
-    );
+      </WagmiConfig>
+    </SessionProvider>
+  );
 };
 
 export default Providers;

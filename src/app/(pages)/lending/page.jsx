@@ -48,7 +48,7 @@ const Lending = () => {
                       className="w-[60px] h-[60px] rounded-full"
                     />
                     <Link
-                      href={"/notFound"}
+                      href={"/lending/walletandfunding"}
                       className="flex flex-col justify-start items-start"
                     >
                       <p className="text-[15px] text-start">Lend Money</p>
@@ -65,9 +65,7 @@ const Lending = () => {
                 <h1 className="text-primarydark text-[1.2em] mt-6">
                   List of Previous Lender
                 </h1>
-                <div className="mt-4">
                   <TableList users={users} />
-                </div>
               </div>
             </div>
           </div>
