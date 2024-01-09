@@ -60,6 +60,7 @@ const ServiceCard = () => {
       panels.forEach((panel, index) => {
         panel.removeEventListener("click", () => handlePanelClick(index));
       });
+      handlePanelClick()
     };
     // Include handlePanelClick in the dependency array for the cleanup effect
   }, [handlePanelClick]); // Run the effect once on component mount

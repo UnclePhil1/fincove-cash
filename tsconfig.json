@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/(pages)/dashboard/page.jsx", "src/pages/_app.jsx"  ],
+, "src/app/(pages)/dashboard/page.jsx", "src/pages/_app.jsx", "src/components/atoms/profileUploader.jsx"  ],
   "exclude": [
     "node_modules"
   ]

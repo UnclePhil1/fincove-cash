@@ -1,4 +1,5 @@
 import React from "react";
+import profileUploader from '../../../../components/atoms/profileUploader';
 
 const Profile =() => {
 
@@ -7,9 +8,8 @@ const Profile =() => {
             {/* Image aspect */}
             <div className="flex flex-row items-center justify-evenly">
                 <button className="p-3 rounded-lg links bg-purple-800 text-white text-center justify-center items-center">Upload New</button>
-                <button className="p-3 rounded-lg links bg-gray-700 text-white text-center justify-center items-center">Delete Avatar</button>
+                <profileUploader />
             </div>
-
             {/* Form Aspect */}
             <div className="w-full items-center mt-5 mb-5">
 
