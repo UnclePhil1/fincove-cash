@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Rowdies&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Zilla+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Salsa&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -10,15 +9,15 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-body, html {
-  font-family: "Zilla Slab", serif !important;
-}   
+body,
+html {
+  font-family: "Inter", sans-serif;
+}
 
-.backgroundImage{
-  background-image: url('../../public/Image/background.jpg');
+.backgroundImage {
+  background-image: url("../../public/Image/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .bg-purple-800 {

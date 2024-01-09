@@ -8,7 +8,9 @@ import AccessSite from '../components/organism/AccessSite/index'
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "./api/auth/[...nextauth]/route";
+import "./globals.css";
 const session = await getServerSession(authOptions);
+
 
 
 export default function Home() {

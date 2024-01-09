@@ -1,6 +1,6 @@
 import { connectMongoDB } from "@/../../lib/mongodb";
 import User from "@/../../models/user";
-import NextAuth from "next-auth/next";
+import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 
@@ -29,7 +29,8 @@ export const authOptions = {
 
           return user;
         } catch (error) {
-          console.log("Error: ", error);
+          console.error("Error: ", error);
+          return null;
         }
       },
     }),
@@ -45,4 +46,4 @@ export const authOptions = {
 
 const handler = NextAuth(authOptions);
 
-export { handler as GET, handler as POST };
+export default handler;

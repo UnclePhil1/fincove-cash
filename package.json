@@ -36,6 +36,7 @@
     "wagmi": "^1.4.13"
   },
   "devDependencies": {
+    "@types/next-auth": "^3.15.0",
     "@types/node": "20.8.9",
     "@types/react": "18.2.33",
     "autoprefixer": "^10.4.16",
