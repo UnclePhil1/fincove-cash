@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Rowdies&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Zilla+Slab&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+
+body, html {
+  font-family: "Zilla Slab", serif !important;
+}   
 
 .backgroundImage{
   background-image: url('../../public/Image/background.jpg');
