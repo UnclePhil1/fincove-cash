@@ -14,7 +14,7 @@ export default function Registers() {
       const serverSession = await getServerSession(authOptions);
 
       if (serverSession) {
-        router.replace('/dashboard');
+        router.replace('/');
       } else {
         router.replace('/')
       }
