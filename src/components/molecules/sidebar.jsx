@@ -9,7 +9,6 @@ import {
   Settings,
   Money,
 } from "@mui/icons-material";
-import Image from "next/image";
 import "../../../src/style.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

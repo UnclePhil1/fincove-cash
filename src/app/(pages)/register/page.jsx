@@ -1,12 +1,27 @@
-import Register from '../../../components/molecules/RegisterForm'
-import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
-import { authOptions } from "../../api/auth/[...nextauth]/route";
+'use client'
+import { useEffect } from 'react';
+import { getServerSession, useSession } from 'next-auth';
+import { useRouter } from 'next/router';
+import { authOptions } from '../../api/auth/[...nextauth]/route';
+import Register from '../../../components/molecules/RegisterForm';
 
-export default async function Registers() {
-  const session = await getServerSession(authOptions);
+export default function Registers() {
+  const { data: session } = useSession();
+  const router = useRouter();
 
-  if (session) redirect("/dashboard");
+  useEffect(() => {
+    const checkSession = async () => {
+      const serverSession = await getServerSession(authOptions);
+
+      if (serverSession) {
+        router.replace('/dashboard');
+      } else {
+        router.replace('/')
+      }
+    };
+
+    checkSession();
+  }, [router]);
 
   return <Register />;
 }

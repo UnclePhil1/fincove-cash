@@ -1,4 +1,5 @@
 import React from "react";
+import profileUploader from '../../../../components/atoms/profileUploader';
 
 const Profile =() => {
 
@@ -7,6 +8,7 @@ const Profile =() => {
             {/* Image aspect */}
             <div className="flex flex-row items-center justify-evenly">
                 <button className="p-3 rounded-lg links bg-purple-800 text-white text-center justify-center items-center">Upload New</button>
+                <div><profileUploader /></div>
             </div>
             {/* Form Aspect */}
             <div className="w-full items-center mt-5 mb-5">
@@ -21,7 +23,7 @@ const Profile =() => {
                         <input
                             type="text"
                             id="fname"
-                            className="border rounded-lg py-4 px-3 focus:outline-primary"
+                            className="border rounded-lg py-4 px-3 focus:outline-lightdark"
                             required
                         />
                     </div>
@@ -33,7 +35,7 @@ const Profile =() => {
                         <input
                             type="text"
                             id="lname   "
-                            className="border rounded-lg py-4 px-3 focus:outline-primary"
+                            className="border rounded-lg py-4 px-3 focus:outline-lightdark"
                             required
                         />
                     </div>
@@ -49,7 +51,7 @@ const Profile =() => {
                         <input
                             type="email"
                             id="email"
-                            className="border rounded-lg py-4 px-3 focus:outline-primary"
+                            className="border rounded-lg py-4 px-3 focus:outline-lightdark"
                             required
                         />
                     </div>
@@ -61,7 +63,7 @@ const Profile =() => {
                         <input
                             type="tel"
                             id="phone"
-                            className="border rounded-lg py-4 px-3 focus:outline-primary"
+                            className="border rounded-lg py-4 px-3 focus:outline-lightdark"
                             required
                         />
                     </div>
@@ -76,10 +78,10 @@ const Profile =() => {
                         {/* <Emails setEmail={setEmail} /> */}
 
                         <select
-                            className="border rounded-lg py-4 px-3 focus:outline-primary" required>
+                            className="border rounded-lg py-4 px-3 focus:outline-lightdark" required>
                                 <option>Choose gender</option>
                                 <option value="male">Male</option>
-                                <option value="female">Femail</option>
+                                <option value="female">Female</option>
                             </select>
                     </div>
                     <div className="pt-4 w-[100%] flex flex-col">
@@ -90,7 +92,7 @@ const Profile =() => {
                         <input
                             type="number"
                             id="id"
-                            className="border rounded-lg py-4 px-3 focus:outline-primary"
+                            className="border rounded-lg py-4 px-3 focus:outline-lightdark"
                             required
                         />
                     </div>
@@ -102,7 +104,7 @@ const Profile =() => {
                     Residential Address* <i className="text-red">*</i>
                     </label>
                     {/* <Emails setEmail={setEmail} /> */}
-                    <textarea className="border rounded-lg py-4 px-3 focus:outline-primary"></textarea>
+                    <textarea className="border rounded-lg py-4 px-3 focus:outline-lightdark"></textarea>
                 </div>
             </div>
             <br />

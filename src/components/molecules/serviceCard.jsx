@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import "../../style.css";
 import Link from "next/link";
@@ -40,10 +40,10 @@ const ServiceCard = () => {
 
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const handlePanelClick = (index) => {
+  const handlePanelClick = useCallback((index) => {
     removeActiveClasses();
     setActiveIndex(index);
-  };
+  }, []);
 
   const removeActiveClasses = () => {
     setActiveIndex(null);

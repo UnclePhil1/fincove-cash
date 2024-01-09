@@ -12,9 +12,9 @@ const session = await getServerSession(authOptions);
 
 
 export default function Home() {
-  // const session = getServerSession(authOptions);
+  const session = getServerSession(authOptions);
 
-  // if (session) redirect("/");
+  if (session) redirect("/dashboard");
   return (
     <div className="bg-white">
       <Navbar />
