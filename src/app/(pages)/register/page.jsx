@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { getServerSession, useSession } from 'next-auth';
 import { useRouter } from 'next/router';
-import { authOptions } from '../../api/auth/auth/[...nextauth]/route.js/route';
+import { authOptions } from '../../api/auth/[...nextauth]/route.js';
 import Register from '../../../components/molecules/RegisterForm';
 
 export default function Registers() {
