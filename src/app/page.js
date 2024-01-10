@@ -7,7 +7,7 @@ import ServiceCard from '@/../../src/components/molecules/serviceCard'
 import AccessSite from '../components/organism/AccessSite/index'
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+import { authOptions } from "./api/auth/auth/[...nextauth]/route.js/route";
 import "./globals.css";
 const session = await getServerSession(authOptions);
 

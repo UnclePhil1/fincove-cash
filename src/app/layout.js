@@ -7,6 +7,9 @@ import "react-toastify/dist/ReactToastify.css";
 export const metadata = {
   title: "FinCove",
   description: "FinCove Banking Application",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
