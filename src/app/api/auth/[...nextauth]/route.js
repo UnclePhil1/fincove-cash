@@ -73,8 +73,4 @@ const authOptions = {
   },
 };
 
-export { authOptions }; // Explicitly export authOptions
-
-const handler = NextAuth(authOptions);
-
-export default handler;
+export default NextAuth(authOptions);
